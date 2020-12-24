@@ -53,7 +53,7 @@
                 <button onclick=convert() class="btn waves-effect waves-light" type="button">Pretraži</button>
               </div>
               <div class="input-field col s6">
-                <span id="result"></span><span id="result-unit"> </span>
+                <span id="result"></span>
               </div>
             </div>
           </form>
@@ -68,32 +68,11 @@
       var value = document.getElementById('input').value;
       var from = document.getElementById('from').value;
       var to = document.getElementById('to').value;
-      var res = ''
-
-      coef = [7,4,7,14.29];
-      if (from == to)
-          res = value;
-      else if (from < to) {
-          res = value;
-
-          for(i=from;i<to;i++){
-              res *= coef[i];}
-          }
-      else {
-          res = value;
-
-          for(var i=from-1;i>=to;i--){
-              res = res/coef[i];}
-          }
-      document.getElementById('result').innerHTML = Math.round(res * 100) / 100 + " ";
-      document.getElementById('result-unit').innerHTML = "(" + getResultUnit() + ")";
+		  
+      var res = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok=01&oznakaPlana=13&oznakaPredmeta=MEO&oznakaNastavnika=41&godina=2017&termin=1";
+	  
+      document.getElementById('result').innerHTML = res;
     };
-
-    function getResultUnit(){
-      var select = document.getElementById('to');
-      var selectedOption = select.options[select.selectedIndex].text;
-      return selectedOption;
-    }
 
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('select');
