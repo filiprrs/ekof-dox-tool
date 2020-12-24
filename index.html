@@ -12,29 +12,41 @@
     <div class="container">
       <div class="row">
         <div class="widget col l4 m12 s12 offset-l4">
-          <h4> Ekof dox tool </h4>
+          <h4> ekof dox tool </h4>
           <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="input" type="text" autocomplete="off">
-                <label for="value">Šifra predmeta</label>
-              </div>
+            <div class="row"> 
               <div class="input-field col s12">
-                <select id="from">
+                <select id="rok">
                   <option value="1">Novembar</option>
                   <option value="2">Januar</option>
                   <option value="3">Februar</option>
                   <option value="4">April</option>
                   <option value="5">Jun</option>
                   <option value="6">Jul</option>
-                  <option value="2">Septembar</option>
-                  <option value="3">Oktobar</option>
-                  <option value="4">Oktobar 2</option>
+                  <option value="7">Septembar</option>
+                  <option value="8">Oktobar</option>
+                  <option value="9">Oktobar 2</option>
                 </select>
                 <label>Ispitni rok:</label>
               </div>
+              <div class="input-field col s12">
+                <select id="rok">
+                  <option value="1">08</option>
+                  <option value="2">13</option>
+                  <option value="3">20</option>
+                </select>
+                <label>Akreditacija:</label>
+              </div>			  
+              <div class="input-field col s6">
+                <input id="šifra" type="text" autocomplete="off">
+                <label for="value">Šifra predmeta</label>
+              </div>
 			  <div class="input-field col s12">
-                <input id="input" type="text" autocomplete="off">
+                <input id="nastavnik" type="text" autocomplete="off">
+                <label for="value">Oznaka nastavnika</label>
+              </div>
+			  <div class="input-field col s12">
+                <input id="godina" type="text" autocomplete="off">
                 <label for="value">Školska godina</label>
               </div>
               <div class="input-field col s6">
@@ -49,6 +61,7 @@
       </div>
     </div>
   </body>
+<!-- http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok=01&oznakaPlana=13&oznakaPredmeta=MEO&oznakaNastavnika=41&godina=2017&termin=1 -->
   <script>
     function convert(){
 
