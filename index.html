@@ -72,7 +72,13 @@
 	  var šifra = document.getElementById('šifra').value;
 	  var nastavnik = document.getElementById('nastavnik').value;
 	  var godina = document.getElementById('godina').value;
-	  	  
+	  
+	  if (šifra.length == 4 && rok != 30) {
+	     rok = parseInt(rok) + 40;
+	  } else if (šifra.length == 4 && rok == 30) {
+	     rok = 530;
+	  }
+	  
 	  var link = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok="+rok+"&oznakaPlana="+akreditacijatext+"&oznakaPredmeta="+šifra+"&oznakaNastavnika="+nastavnik+"&godina="+godina+"&termin=1";
 		  
       document.getElementById('link').innerHTML = link;
