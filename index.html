@@ -61,17 +61,12 @@
       </div>
     </div>
   </body>
-<!-- http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok=01&oznakaPlana=13&oznakaPredmeta=MEO&oznakaNastavnika=41&godina=2017&termin=1 -->
   <script>
     function convert(){
 
-      var value = document.getElementById('input').value;
-      var from = document.getElementById('from').value;
-      var to = document.getElementById('to').value;
+	  var res = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok=01&oznakaPlana=13&oznakaPredmeta=MEO&oznakaNastavnika=41&godina=2017&termin=1";
 		  
-      var res = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok=01&oznakaPlana=13&oznakaPredmeta=MEO&oznakaNastavnika=41&godina=2017&termin=1";
-	  
-      document.getElementById('result').innerHTML = res;
+            document.getElementById('result').innerHTML = res;
     };
 
     document.addEventListener('DOMContentLoaded', function() {
