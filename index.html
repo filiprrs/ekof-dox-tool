@@ -55,9 +55,6 @@
               <div class="input-field col s6">
                 <button onclick=output() class="btn waves-effect waves-light" type="button">Pretraži</button>
               </div>
-              <div class="input-field col s6">
-                <span id="link"></span>
-              </div>
             </div>
           </form>
         </div>
@@ -85,8 +82,8 @@
       }
 	  
 	  var link = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok="+rok+"&oznakaPlana="+akreditacijatext+"&oznakaPredmeta="+šifra+"&oznakaNastavnika="+nastavnik+"&godina="+godina+"&termin=1";
-		  
-      document.getElementById('link').innerHTML = link;
+	  
+	  window.open(link);	  
     };
 
     document.addEventListener('DOMContentLoaded', function() {
