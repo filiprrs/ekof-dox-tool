@@ -17,20 +17,20 @@
             <div class="row"> 
               <div class="input-field col s12">
                 <select id="rok">
-                  <option value="1">Novembar</option>
-                  <option value="2">Januar</option>
-                  <option value="3">Februar</option>
-                  <option value="4">April</option>
-                  <option value="5">Jun</option>
-                  <option value="6">Jul</option>
-                  <option value="7">Septembar</option>
-                  <option value="8">Oktobar</option>
-                  <option value="9">Oktobar 2</option>
+                  <option value="1">Januar</option>
+                  <option value="2">Februar</option>
+                  <option value="3">April</option>
+                  <option value="4">Jun</option>
+                  <option value="5">Jul</option>
+                  <option value="6">Septembar</option>
+                  <option value="7">Oktobar</option>
+                  <option value="8">Oktobar 2</option>
+                  <option value="9">Novembar</option>
                 </select>
                 <label>Ispitni rok:</label>
               </div>
               <div class="input-field col s12">
-                <select id="rok">
+                <select id="akreditacija">
                   <option value="1">08</option>
                   <option value="2">13</option>
                   <option value="3">20</option>
@@ -47,13 +47,13 @@
               </div>
 			  <div class="input-field col s12">
                 <input id="godina" type="text" autocomplete="off">
-                <label for="value">Školska godina</label>
+                <label for="value">Godina</label>
               </div>
               <div class="input-field col s6">
-                <button onclick=convert() class="btn waves-effect waves-light" type="button">Pretraži</button>
+                <button onclick=output() class="btn waves-effect waves-light" type="button">Pretraži</button>
               </div>
               <div class="input-field col s6">
-                <span id="result"></span>
+                <span id="link"></span>
               </div>
             </div>
           </form>
@@ -62,11 +62,19 @@
     </div>
   </body>
   <script>
-    function convert(){
-
-	  var res = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok=01&oznakaPlana=13&oznakaPredmeta=MEO&oznakaNastavnika=41&godina=2017&termin=1";
+    function output(){
+	  var rok = document.getElementById('rok').value;
+	  
+	  var akreditacija = document.getElementById('akreditacija');
+      var akreditacijatext = akreditacija.options[akreditacija.selectedIndex].text;
+	  var šifra = document.getElementById('šifra').value;
+ 	  var nastavnik = document.getElementById('nastavnik').value;
+  	  var godina = document.getElementById('godina').value;
+	  
+	  var link = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok=01&oznakaPlana=13&oznakaPredmeta=MEO&oznakaNastavnika=41&godina=2017&termin=1";
 		  
-            document.getElementById('result').innerHTML = res;
+      document.getElementById('link').innerHTML = link;
+	  
     };
 
     document.addEventListener('DOMContentLoaded', function() {
