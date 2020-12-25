@@ -41,12 +41,9 @@
                 </select>
                 <label>Akreditacija:</label>
               </div>			  
-              <div class="input-field col s6">
-                <input id="šifra" type="text" autocomplete="off">
-                <label for="value">Šifra predmeta</label>
-              </div>
               <div class="input-field col s12">
                 <select id="nastavnik">
+				<option disabled selected value></option>
 				<option value="1">Stojan Babić</option>
 				<option value="2">Marko Backović</option>
 				<option value="5">Vladan Božić</option>
@@ -125,7 +122,7 @@
 				<option value="133">Dušan Marković</option>					
 				<option value="134">Saša Ranđelović</option>					
 				<option value="207">Nikola Njegovan</option>
-				<option value="231">Vojislav sekerez</option>
+				<option value="231">Vojislav Sekerez</option>
 				<option value="343">Dejan Spasić</option>
 				<option value="347">Danka Stojaković</option>
 				<option value="400">Ivana Popović Petrović</option>
@@ -137,6 +134,10 @@
 				<option value="609">Veran Stanojević</option>
                 </select>
                 <label>Nastavnik:</label>
+              </div>
+			  <div class="input-field col s6">
+                <input id="šifra" type="text" autocomplete="off">
+                <label for="value">Šifra predmeta</label>
               </div>
 			  <div class="input-field col s12">
                 <input id="godina" type="text" autocomplete="off">
@@ -156,9 +157,9 @@
 	  var rok = document.getElementById('rok').value;
 	  var akreditacija = document.getElementById('akreditacija');
 	  var akreditacijatext = akreditacija.options[akreditacija.selectedIndex].text;
-	  var šifra = document.getElementById('šifra').value;
 	  var nastavnik = document.getElementById('nastavnik');
-  	  var nastavniktext = nastavnik.options[nastavnik.selectedIndex].text;
+	  var nastavniktext = nastavnik.options[nastavnik.selectedIndex].text;
+	  var šifra = document.getElementById('šifra').value;
 	  var godina = document.getElementById('godina').value;
 	  
 	  if (šifra.length == 4 && rok != 30) {
@@ -167,7 +168,7 @@
 	     rok = 530;
 	  }
 	  
-	  if (šifra == "" || godina == "" ){
+	  if (šifra == "" || nastavniktext == "" || godina == "" ){
         alert("Neophodno je popuniti sva polja!");
         return false;
       }
