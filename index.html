@@ -79,6 +79,11 @@
 	     rok = 530;
 	  }
 	  
+	  if (šifra == "" || nastavnik == "" || godina == "" ){
+        alert("Neophodno je popuniti sva polja!");
+        return false;
+      }
+	  
 	  var link = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok="+rok+"&oznakaPlana="+akreditacijatext+"&oznakaPredmeta="+šifra+"&oznakaNastavnika="+nastavnik+"&godina="+godina+"&termin=1";
 		  
       document.getElementById('link').innerHTML = link;
