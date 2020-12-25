@@ -64,14 +64,13 @@
   <script>
     function output(){
 	  var rok = document.getElementById('rok').value;
-	  
 	  var akreditacija = document.getElementById('akreditacija');
-      var akreditacijatext = akreditacija.options[akreditacija.selectedIndex].text;
+	  var akreditacijatext = akreditacija.options[akreditacija.selectedIndex].text;
 	  var šifra = document.getElementById('šifra').value;
- 	  var nastavnik = document.getElementById('nastavnik').value;
-  	  var godina = document.getElementById('godina').value;
+	  var nastavnik = document.getElementById('nastavnik').value;
+	  var godina = document.getElementById('godina').value;
 	  
-	  var link = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok=01&oznakaPlana=13&oznakaPredmeta=MEO&oznakaNastavnika=41&godina=2017&termin=1";
+	  var link = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok=0"+rok+"&oznakaPlana="+akreditacijatext+"&oznakaPredmeta="+šifra+"&oznakaNastavnika="+nastavnik+"&godina="+godina+"&termin=1";
 		  
       document.getElementById('link').innerHTML = link;
 	  
