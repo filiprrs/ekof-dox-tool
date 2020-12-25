@@ -45,9 +45,98 @@
                 <input id="šifra" type="text" autocomplete="off">
                 <label for="value">Šifra predmeta</label>
               </div>
-			  <div class="input-field col s12">
-                <input id="nastavnik" type="text" autocomplete="off">
-                <label for="value">Oznaka nastavnika</label>
+              <div class="input-field col s12">
+                <select id="nastavnik">
+				<option value="1">Stojan Babić</option>
+				<option value="2">Marko Backović</option>
+				<option value="5">Vladan Božić</option>
+				<option value="6">Branislav Boričić</option>
+				<option value="7">Sreten Vujović</option>
+				<option value="13">Đorđe Đukić</option>
+				<option value="14">Dragan Đuričin</option>
+				<option value="15">Boško Živković</option>
+				<option value="16">Siniša Zarić</option>
+				<option value="17">Milorad Ivanišević</option>
+				<option value="18">Miomir Jakšić</option>
+				<option value="19">Nebojša Janićijević</option>
+				<option value="20">Biljana Jovanović Gavrilović</option>
+				<option value="22">Ljubinka Joksimović</option>
+				<option value="24">Radovan Kovačević</option>
+				<option value="25">Jelena Kozomara</option>					
+				<option value="26">Jelena Kočović</option>					
+				<option value="27">Stipe Lovreta</option>					
+				<option value="29">Radojko Lukić</option>					
+				<option value="30">Branko Maričić</option>					
+				<option value="31">Branko Medojević</option>					
+				<option value="32">Milić Milovanović</option>					
+				<option value="33">Zorica Mladenović</option>					
+				<option value="34">Dubravka Pavličić</option>					
+				<option value="35">Blagoje Paunović</option>					
+				<option value="36">Goran Petković</option>					
+				<option value="37">Mirjana Petković</option>					
+				<option value="38">Ljiljana Petrović</option>					
+				<option value="39">Pavle Petrović</option>					
+				<option value="41">Danica Popović <3</option>					
+				<option value="42">Biljana Radivojević</option>					
+				<option value="44">Branko Rakita</option>					
+				<option value="46">Jasna Soldić-Aleksić</option>					
+				<option value="47">Rade Stankić</option>					
+				<option value="48">Dušanka Ušćumlić</option>					
+				<option value="49">Božidar Cerović</option>					
+				<option value="50">Čedomir Čupić</option>					
+				<option value="51">Kata Škarić Jovanović</option>					
+				<option value="52">Mihail Arandarenko</option>					
+				<option value="53">Slobodan Aćimović</option>					
+				<option value="54">Biljana Bogićević-Milikić</option>					
+				<option value="56">Mirjana Gligorijević</option>					
+				<option value="57">Ljubiša Dabić</option>					
+				<option value="58">Aleksandar Živković</option>
+				<option value="59">Radmila Jablan Stefanović</option>
+				<option value="60">Dejan Malinić</option>
+				<option value="63">Jelena Perović</option>
+				<option value="65">Ljubodrag Savić</option>
+				<option value="66">Božo Stojanović</option>
+				<option value="67">Žaklina Stojanović</option>
+				<option value="69">Milorad Filipović</option>
+				<option value="70">Dejan Šoškić</option>
+				<option value="71">Milojko Arsić</option>
+				<option value="72">Predrag Bjelić</option>
+				<option value="74">Olgica Bošković</option>
+				<option value="75">Vladimir Vasić</option>
+				<option value="76">Saša Veljković</option>
+				<option value="78">Radmila Dragutinović-Mitrović</option>
+				<option value="79">Tatjana Đurović</option>					
+				<option value="80">Aleksandra Zečević</option>					
+				<option value="81">Bojan Zečević</option>					
+				<option value="86">Vlade Milićević</option>					
+				<option value="88">Aleksandra Nojković</option>					
+				<option value="90">Zoran Popović</option>					
+				<option value="92">Ivana Prica</option>					
+				<option value="96">Nadežda Silaški</option>					
+				<option value="97">Miroslav Todorović</option>					
+				<option value="98">Branko Urošević</option>					
+				<option value="104">Jasna Babić</option>					
+				<option value="106">Savka Vučković Milutinović</option>					
+				<option value="107">Aleksandar Đorđević</option>					
+				<option value="113">Emilija Manić</option>					
+				<option value="114">Sanja Mitić</option>					
+				<option value="115">Đorđe Mitrović</option>					
+				<option value="116">Marija Pantelić</option>					
+				<option value="133">Dušan Marković</option>					
+				<option value="134">Saša Ranđelović</option>					
+				<option value="207">Nikola Njegovan</option>
+				<option value="231">Vojislav sekerez</option>
+				<option value="343">Dejan Spasić</option>
+				<option value="347">Danka Stojaković</option>
+				<option value="400">Ivana Popović Petrović</option>
+				<option value="422">Miloš Božović</option>
+				<option value="452">Dušan Mojić</option>
+				<option value="475">Mirjana Adamović</option>
+				<option value="498">Andrijana Berić</option>
+				<option value="598">Vuk Radović</option>
+				<option value="609">Veran Stanojević</option>
+                </select>
+                <label>Nastavnik:</label>
               </div>
 			  <div class="input-field col s12">
                 <input id="godina" type="text" autocomplete="off">
@@ -68,7 +157,8 @@
 	  var akreditacija = document.getElementById('akreditacija');
 	  var akreditacijatext = akreditacija.options[akreditacija.selectedIndex].text;
 	  var šifra = document.getElementById('šifra').value;
-	  var nastavnik = document.getElementById('nastavnik').value;
+	  var nastavnik = document.getElementById('nastavnik');
+  	  var nastavniktext = nastavnik.options[nastavnik.selectedIndex].text;
 	  var godina = document.getElementById('godina').value;
 	  
 	  if (šifra.length == 4 && rok != 30) {
@@ -77,12 +167,12 @@
 	     rok = 530;
 	  }
 	  
-	  if (šifra == "" || nastavnik == "" || godina == "" ){
+	  if (šifra == "" || godina == "" ){
         alert("Neophodno je popuniti sva polja!");
         return false;
       }
 	  
-	  var link = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok="+rok+"&oznakaPlana="+akreditacijatext+"&oznakaPredmeta="+šifra+"&oznakaNastavnika="+nastavnik+"&godina="+godina+"&termin=1";
+	  var link = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok="+rok+"&oznakaPlana="+akreditacijatext+"&oznakaPredmeta="+šifra+"&oznakaNastavnika="+nastavniktext+"&godina="+godina+"&termin=1";
 	  
 	  window.open(link);	  
     };
