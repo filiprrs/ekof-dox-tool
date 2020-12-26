@@ -123,6 +123,7 @@
 				<option value="115">Đorđe Mitrović</option>					
 				<option value="116">Marija Pantelić</option>
 				<option value="120">Dejan Trifunović</option>
+				<option value="128">Filip Muratović</option>
 				<option value="133">Dušan Marković</option>					
 				<option value="134">Saša Ranđelović</option>					
 				<option value="207">Nikola Njegovan</option>
@@ -172,6 +173,11 @@
 	  
 	  if (šifra == "" || nastavnik == "" || godina == "" ){
         alert("Neophodno je popuniti sva polja!");
+        return false;
+      }
+	  
+	  if (nastavnik == "128" && šifra == "MUU"){
+        window.open("https://www.youtube.com/watch?v=qTA5823g45E");
         return false;
       }
 	  
