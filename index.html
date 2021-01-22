@@ -156,12 +156,20 @@
               <div class="input-field col s12">
                 <input id="šifra" type="text" autocomplete="off">
                 <label for="value">ŠIFRA PREDMETA</label>
-                <br><font size=1>Primer: <i>OEK</i> za predmet Osnovi ekonomije.</font>
+            <font size=1><font size=1>Primer: <i>OEK</i> za predmet Osnovi ekonomije.
+			<details>
+				<summary>Pomoć</summary>
+				Šifra predmeta ima 3 slova, ili 4 ukoliko je reč o predmetu sa master studija. Na primer, <i>OEK</i> je šifra za predmet Osnovi ekonomije, a <i>MSTK</i> šifra za predmet Strategijski kontroling sa master studija. Šifre se mogu naći pored naziva predmeta na servisu, u sekcijama Položeni ispiti, Nepoloženi ispiti, Istorija polaganja, Prijava ispita, Odjava ispita.
+			</details></font>
               </div>
               <div class="input-field col s12">
                 <input id="godina" type="text" autocomplete="off">
                 <label for="value">GODINA</label>
-                <br><font size=1>Primer: <i>2020</i> za školsku 2020/21. godinu.</font>
+			<font size=1>Primer: <i>2020</i> za školsku 2020/21. godinu.
+            <details>
+			<summary>Pomoć</summary>
+			Potrebno je uneti kalendarsku godinu u kojoj je <b>počela</b> školska godina u kojoj je održan odabrani ispitni rok. Tako, na primer, ukoliko je u pitanju školska 2020/21. godina, unosi se <i>2020</i>, jer je ta školska godina počela u oktobru 2020. godine. Slično, ukoliko je u pitanju školska 2015/16. godina, unosi se <i>2015</i>.
+			</details></font>
               </div>
               <div class="input-field col s6">
                 <button onclick=output() class="btn waves-effect waves-light" type="button">Pretraži</button>
