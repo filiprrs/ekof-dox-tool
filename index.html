@@ -168,7 +168,7 @@
 			<font size=1>Primer: <i>2020</i> za školsku 2020/21. godinu.
             <details>
 			<summary>Pomoć</summary>
-			Potrebno je uneti kalendarsku godinu u kojoj je <b>počela</b> školska godina u kojoj je održan odabrani ispitni rok. Tako, na primer, ukoliko je u pitanju školska 2020/21. godina, unosi se <i>2020</i>, jer je ta školska godina počela u oktobru 2020. godine. Slično, ukoliko je u pitanju školska 2015/16. godina, unosi se <i>2015</i>.
+			Potrebno je uneti kalendarsku godinu u kojoj je <b>počela</b> školska godina u kojoj je održan odabrani ispitni rok. Tako, na primer, ukoliko je u pitanju školska 2020/21. godina, unosi se <i>2020</i> jer je ta školska godina počela na jesen 2020. godine. Slično, unosi se <i>2017</i> ukoliko je u pitanju školska 2017/18. godina.
 			</details></font>
               </div>
               <div class="input-field col s6">
@@ -201,6 +201,11 @@
 	  
 	  if (šifra == "" || nastavnik == "" || godina == "" ){
           alert("Neophodno je popuniti sva polja!");
+          return false;
+          }
+		  
+	  if (godina.length > 4 ){
+          alert("Godina nije pravilno unesena!");
           return false;
           }
 	  
