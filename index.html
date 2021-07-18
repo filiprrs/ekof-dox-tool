@@ -122,6 +122,7 @@
                   <option value="89">Galjina Ognjanov</option>
                   <option value="90">Zoran Popović</option>
                   <option value="92">Ivana Prica</option>
+				  <option value="95">Tatjana Rakonjac-Antić</option>
                   <option value="96">Nadežda Silaški</option>
                   <option value="97">Miroslav Todorović</option>
                   <option value="98">Branko Urošević</option>
@@ -201,6 +202,12 @@
           return false;
           }
 	  
+	  if (šifra == "MEO" && nastavnik != 41){
+          alert("EKOF DOX TOOL sa gnušanjem osuđuje i ne priznaje skandaloznu politički motivisanu smenu nastavnika na predmetu Međunarodna ekonomija. Molimo Vas da promenite Vaš izbor predmetnog nastavnika.");
+          return false;
+          }
+
+		
 	  if (šifra == "" || nastavnik == "" || godina == "" ){
           alert("Neophodno je popuniti sva polja!");
           return false;
