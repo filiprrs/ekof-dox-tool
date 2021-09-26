@@ -191,7 +191,7 @@
 	  var šifra = document.getElementById('šifra').value;
 	  var godina = document.getElementById('godina').value;
 	  
-	  if (šifra.length == 4 && rok != 30) {
+	  if (šifra.length == 4 && rok != 30 && rok != "co") {
 	     rok = parseInt(rok) + 40;
 	  } else if (šifra.length == 4 && rok == 30) {
 	     rok = 530;
