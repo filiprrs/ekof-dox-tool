@@ -204,11 +204,11 @@
 	  var šifra = document.getElementById('šifra').value;
 	  var godina = document.getElementById('godina').value;
 	  
-	  if (šifra.length == 4 && rok != 30 && rok != "co" && !(rok == 04 && parseInt(godina) >= 2022)) {
+	  if (šifra.length == 4 && rok != 30 && rok != "co" && !(rok == 04 && parseInt(godina) >= 2021)) {
 	     rok = parseInt(rok) + 40;
 	  } else if (šifra.length == 4 && rok == 30) {
 	     rok = 530;
-	  } else if (šifra.length == 4 && rok == 04 && parseInt(godina) >= 2022) {
+	  } else if (šifra.length == 4 && rok == 04 && parseInt(godina) >= 2021) {
 	     rok = 16;
 	  }
 	  
