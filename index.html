@@ -24,7 +24,6 @@
                   <option value="01">Januar</option>
                   <option value="02">Februar</option>
                   <option value="04">April</option>
-                  <option value="16">April Covid-19 (master)</option>
                   <option value="05">Maj (samo 2012. godina)</option>
                   <option value="06">Jun</option>
                   <option value="07">Jul</option>
@@ -205,10 +204,12 @@
 	  var šifra = document.getElementById('šifra').value;
 	  var godina = document.getElementById('godina').value;
 	  
-	  if (šifra.length == 4 && rok != 30 && rok != "co" && rok != 16) {
+	  if (šifra.length == 4 && rok != 30 && rok != "co" && !(rok == 04 && parseInt(godina) >= 2022)) {
 	     rok = parseInt(rok) + 40;
 	  } else if (šifra.length == 4 && rok == 30) {
 	     rok = 530;
+	  } else if (šifra.length == 4 && rok == 04 && parseInt(godina) >= 2022) {
+	     rok = 16;
 	  }
 	  
 	  if (nastavnik == "128"){
