@@ -146,6 +146,7 @@
                   <option value="128">128 Filip Muratović</option>
                   <option value="133">133 Dušan Marković</option>
                   <option value="134">134 Saša Ranđelović</option>
+				  <option value="140">140 Marko Vladisavljević</option>
                   <option value="172">172 Biljana Chroneos Krasavac</option>
                   <option value="207">207 Nikola Njegovan</option>
                   <option value="231">231 Vojislav Sekerez</option>
@@ -181,10 +182,10 @@
               <div class="input-field col s12">
                 <input id="godina" type="text" autocomplete="off">
                 <label for="value">GODINA</label>
-                <font size=1>Primer: <i>2021</i> za školsku 2021/22. godinu.
+                <font size=1>Primer: <i>2022</i> za školsku 2022/23. godinu.
                 <details>
                   <summary>Pomoć</summary>
-                  Potrebno je uneti kalendarsku godinu u kojoj je <b>počela</b> školska godina u kojoj je održan odabrani ispitni rok. Tako, na primer, ukoliko je u pitanju školska 2021/22. godina, unosi se <i>2021</i> jer je ta školska godina počela na jesen 2021. godine. Slično, unosi se <i>2020</i> ukoliko je u pitanju školska 2020/21. godina, jer je ta školska godina počela na jesen 2020. godine.
+                  Potrebno je uneti kalendarsku godinu u kojoj je <b>počela</b> školska godina u kojoj je održan odabrani ispitni rok. Tako, na primer, ukoliko je u pitanju školska 2022/23. godina, unosi se <i>2022</i> jer je ta školska godina počela na jesen 2022. godine. Slično, unosi se <i>2021</i> ukoliko je u pitanju školska 2021/22. godina, jer je ta školska godina počela na jesen 2021. godine.
                 </details></font>
               </div>
               <div class="input-field col s6">
@@ -217,7 +218,7 @@
           return false;
           }
 	  
-	  if (šifra == "MEO" && nastavnik != 41 && parseInt(godina) >= 2021 && parseInt(godina) <= 2024){
+	  if (šifra == "MEO" && nastavnik != 41 && parseInt(godina) >= 2021 && parseInt(godina) <= 2023){
           alert("EKOF DOX TOOL sa gnušanjem osuđuje i ne priznaje skandaloznu politički motivisanu smenu nastavnika na predmetu Međunarodna ekonomija. Iz tog razloga, rezultati ispita ne mogu biti prikazani.");
           return false;
           }
