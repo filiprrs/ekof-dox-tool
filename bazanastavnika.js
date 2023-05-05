@@ -104,6 +104,7 @@
     { value: '347', text: '347 Danka Stojaković' },
     { value: '398', text: '398 Jovan Filipović' },
     { value: '400', text: '400 Ivana Popović Petrović' },
+    { value: '402', text: '402 Veljko Mijušković' },
     { value: '422', text: '422 Miloš Božović' },
     { value: '452', text: '452 Dušan Mojić' },
     { value: '475', text: '475 Mirjana Adamović' },
