@@ -93,6 +93,7 @@
     { value: '127', text: '127 Jelena Stanojević' },
     { value: '128', text: '128 Filip Muratović' },
     { value: '129', text: '129 Bojan Ristić' },
+	{ value: '131', text: '131 Vukašin Kuč' },
     { value: '132', text: '132 Iva Vuksanović Herceg' },
     { value: '133', text: '133 Dušan Marković' },
     { value: '134', text: '134 Saša Ranđelović' },
