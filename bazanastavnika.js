@@ -67,6 +67,7 @@
     { value: '81', text: '81 Bojan Zečević'},
     { value: '82', text: '82 Đorđe Kaličanin'},
     { value: '84', text: '84 Dragan Lončar'},
+    { value: '85', text: '85 Slavica Manić' },
     { value: '86', text: '89 Vlade Milićević' },
     { value: '88', text: '88 Aleksandra Nojković' },
     { value: '89', text: '89 Galjina Ognjanov' },
