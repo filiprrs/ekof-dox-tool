@@ -106,7 +106,7 @@
     { value: '144', text: '144 Svetozar Tanasković' },
     { value: '172', text: '172 Biljana Chroneos Krasavac' },
     { value: '207', text: '207 Nikola Njegovan' },
-	{ value: '219', text: '218 Dragana Draganac' },
+	{ value: '218', text: '218 Dragana Draganac' },
 	{ value: '219', text: '219 Milan Glišić' },
     { value: '231', text: '231 Vojislav Sekerez' },
     { value: '343', text: '343 Dejan Spasić' },
