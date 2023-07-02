@@ -114,6 +114,7 @@
     { value: '398', text: '398 Jovan Filipović' },
     { value: '400', text: '400 Ivana Popović Petrović' },
     { value: '402', text: '402 Veljko Mijušković' },
+    { value: '407', text: '407 Mladen Stamenković' },
     { value: '422', text: '422 Miloš Božović' },
 	{ value: '443', text: '443 Aleksandra Anić' },
     { value: '445', text: '445 Milutin Ješić' },
@@ -125,6 +126,7 @@
 	{ value: '540', text: '540 Gordana Kokeza' },
     { value: '598', text: '598 Vuk Radović' },
     { value: '609', text: '609 Veran Stanojević'},
+    { value: '756', text: '756 Dragana Radojičić'},
     { value: '774', text: '774 Nikola Altiparmakov'}
 ];
 
