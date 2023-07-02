@@ -124,7 +124,8 @@
     { value: '498', text: '498 Andrijana Berić' },
 	{ value: '540', text: '540 Gordana Kokeza' },
     { value: '598', text: '598 Vuk Radović' },
-    { value: '609', text: '609 Veran Stanojević'}
+    { value: '609', text: '609 Veran Stanojević'},
+    { value: '774', text: '774 Nikola Altiparmakov'}
 ];
 
 const selectNastavnik = document.getElementById("nastavnik");
