@@ -102,6 +102,7 @@
     { value: '132', text: '132 Iva Vuksanović Herceg' },
     { value: '133', text: '133 Dušan Marković' },
     { value: '134', text: '134 Saša Ranđelović' },
+    { value: '139', text: '139 Marija Koprivica' },
     { value: '140', text: '140 Marko Vladisavljević' },
     { value: '144', text: '144 Svetozar Tanasković' },
     { value: '172', text: '172 Biljana Chroneos Krasavac' },
