@@ -106,6 +106,7 @@
     { value: '135', text: '135 Irena Janković' },
     { value: '139', text: '139 Marija Koprivica' },
     { value: '140', text: '140 Marko Vladisavljević' },
+    { value: '143', text: '143 Dejan Molnar' },
     { value: '144', text: '144 Svetozar Tanasković' },
     { value: '172', text: '172 Biljana Chroneos Krasavac' },
     { value: '207', text: '207 Nikola Njegovan' },
