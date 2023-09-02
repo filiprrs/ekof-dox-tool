@@ -74,6 +74,7 @@
     { value: '90', text: '90 Zoran Popović' },
 	{ value: '91', text: '91 Aleksandra Praščević' },
     { value: '92', text: '92 Ivana Prica' },
+    { value: '94', text: '94 Vesna Rajić' },
     { value: '95', text: '95 Tatjana Rakonjac-Antić' },
     { value: '96', text: '96 Nadežda Silaški' },
     { value: '97', text: '97 Miroslav Todorović' },
