@@ -76,13 +76,18 @@
                   Potrebno je uneti kalendarsku godinu u kojoj je <b>počela</b> školska godina u kojoj je održan odabrani ispitni rok. Tako, na primer, ukoliko je u pitanju školska 2022/23. godina, unosi se <i>2022</i> jer je ta školska godina počela na jesen 2022. godine. Slično, unosi se <i>2021</i> ukoliko je u pitanju školska 2021/22. godina, jer je ta školska godina počela na jesen 2021. godine.
                 </details>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col s4">
                 <button onclick=output() class="btn waves-effect waves-light" type="button">Pretraži</button>
               </div>
-              <details>
-                <summary>Više</summary>
-                <a href="https://bit.ly/anapro" target="_blank">Analiza prolaznosti</a>
-              </details>
+              <div class="input-field col s8">
+                <label>
+                <input type="checkbox" id="analizirajprolaznost" class="checkbox-margin">
+                <span>Analiziraj prolaznost</span>
+                </label>
+              </div>
+              <div class="input-field col s12">
+                <div id="resultLink"></div>
+              </div>
             </div>
           </form>
         </div>
@@ -97,6 +102,7 @@
 	  var nastavnik = document.getElementById('nastavnik').value;
 	  var šifra = document.getElementById('šifra').value;
 	  var godina = document.getElementById('godina').value;
+    var analizirajprolaznost = document.getElementById('analizirajprolaznost').checked;
 	  
 	  if (šifra.length == 4 && rok != 30 && rok != "co" && !(rok == 04 && parseInt(godina) >= 2021)) {
 	     rok = parseInt(rok) + 40;
@@ -128,7 +134,13 @@
 	  
 	  var link = "http://sservis.ekof.bg.ac.rs/do?action=rezultatiIspita&ispitniRok="+rok+"&oznakaPlana="+akreditacija+"&oznakaPredmeta="+šifra+"&oznakaNastavnika="+nastavnik+"&godina="+godina+"&termin=1";
 	  
-	  window.open(link);	  
+    if(analizirajprolaznost) {
+      var sourceLink = "view-source:" + link;
+      document.getElementById('resultLink').innerHTML = sourceLink + '<br><br>' + 'Otvorite novi tab i kopirajte ovaj link u URL bar. Otvoriće se HTML kod koji je potrebno prekopirati u ' + '<a href="https://bit.ly/anapro" target="_blank" rel="noopener noreferrer">' + 'bit.ly/anapro' +'</a>.';
+      }
+    else{
+	    window.open(link);	
+      } 
     };
 
     document.addEventListener('DOMContentLoaded', function() {

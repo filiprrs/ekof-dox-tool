@@ -37,3 +37,9 @@ form{
   background-color: #43434c;
   border-radius: 5px;
 }
+
+#resultLink {
+  white-space: normal;
+  word-break: break-word;
+  max-width: 100%;
+}
