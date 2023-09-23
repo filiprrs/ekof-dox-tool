@@ -131,6 +131,7 @@
     { value: '475', text: '475 Mirjana Adamović' },
     { value: '498', text: '498 Andrijana Berić' },
 	{ value: '540', text: '540 Gordana Kokeza' },
+    { value: '542', text: '542 Aleksandra Đorđević' },
     { value: '565', text: '565 Dalibor Petrović' },
     { value: '598', text: '598 Vuk Radović' },
     { value: '609', text: '609 Veran Stanojević'},
