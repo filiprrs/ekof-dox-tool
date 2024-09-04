@@ -127,6 +127,7 @@
     { value: '422', text: '422 Miloš Božović' },
 	{ value: '443', text: '443 Aleksandra Anić' },
     { value: '445', text: '445 Milutin Ješić' },
+    { value: '448', text: '448 Ivana Ivković' },
     { value: '452', text: '452 Dušan Mojić' },
     { value: '461', text: '461 Milutin Živanović' },
     { value: '462', text: '462 Dragan Aleksić' },
