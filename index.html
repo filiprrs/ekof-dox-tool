@@ -39,8 +39,8 @@
               <div class="input-field col s12">
                 <select id="akreditacija">
                   <option value="08">08 (generacije 2008-2013)</option>
-                  <option value="13" selected="selected">13 (generacije 2014-2019)</option>
-                  <option value="20">20 (generacije 2020 i mlađe)</option>
+                  <option value="13">13 (generacije 2014-2019)</option>
+                  <option value="20" selected="selected">20 (generacije 2020 i mlađe)</option>
                 </select>
                  <label>AKREDITACIJA</label>
                  <details>
@@ -70,10 +70,10 @@
               <div class="input-field col s12">
                 <input id="godina" type="text" autocomplete="off">
                 <label for="value">GODINA</label>
-                Primer: <i>2023</i> za školsku 2023/24. godinu.
+                Primer: <i>2024</i> za školsku 2024/25. godinu.
                 <details>
                   <summary>Pomoć</summary>
-                  Potrebno je uneti kalendarsku godinu u kojoj je <b>počela</b> školska godina u kojoj je održan odabrani ispitni rok. Tako, na primer, ukoliko je u pitanju školska 2023/24. godina, unosi se <i>2023</i> jer je ta školska godina počela na jesen 2023. godine. Slično, unosi se <i>2022</i> ukoliko je u pitanju školska 2022/23. godina, jer je ta školska godina počela na jesen 2022. godine.
+                  Potrebno je uneti kalendarsku godinu u kojoj je <b>počela</b> školska godina u kojoj je održan odabrani ispitni rok. Tako, na primer, ukoliko je u pitanju školska 2024/25. godina, unosi se <i>2024</i> jer je ta školska godina počela na jesen 2024. godine. Slično, unosi se <i>2022</i> ukoliko je u pitanju školska 2022/23. godina, jer je ta školska godina počela na jesen 2022. godine.
                 </details>
               </div>
               <div class="input-field col s4">
@@ -110,7 +110,9 @@
 	     rok = 530;
 	  } else if (šifra.length == 4 && rok == 04 && parseInt(godina) >= 2021) {
 	     rok = 16;
-	  }
+	  } else if (rok == 30 && parseInt (godina) >= 2024) {
+       rok = "З0";
+    }
 	  
 	  if (nastavnik == "345"){
           window.open("https://www.youtube.com/watch?v=qTA5823g45E");

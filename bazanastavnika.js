@@ -143,6 +143,7 @@
     { value: '609', text: '609 Veran Stanojević'},
     { value: '611', text: '611 Radovan Kastratović'},
     { value: '756', text: '756 Dragana Radojičić'},
+    { value: '757', text: '757 Veljko Marinković'},
     { value: '774', text: '774 Nikola Altiparmakov'}
 ];
 
