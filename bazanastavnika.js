@@ -147,7 +147,7 @@
     { value: '742', text: '742 Jović Ž.'},
     { value: '756', text: '756 Radojičić'},
     { value: '757', text: '757 Marinković'},
-    { value: '774', text: '774 Altiparmakov'}
+    { value: '774', text: '774 Altiparmakov'},
     { value: '0', text: '0 Provera spiska'}
 ];
 
