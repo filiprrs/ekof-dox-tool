@@ -234,7 +234,7 @@ const nastavnikIndex = nastavnikOptions.map((o) => {
     if (matches.length === 0) {
       const li = document.createElement("li");
       li.className = "no-results";
-      li.textContent = "Nema rezultata";
+      li.textContent = "Unesite prezime, broj, šifru ili naziv predmeta";
       dropdown.appendChild(li);
       dropdown.hidden = false;
       return;
