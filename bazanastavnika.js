@@ -35,7 +35,7 @@ const nastavnikOptions = [
     { value: "45", text: "45 Rikalović", tags: ["RAE", "Uvod u razvojnu ekonomiju", "MEPR", "Upravljanje prirodnim resursima i zaštita životne sredine", "MGRP", "Globalizacija i razvoj poljoprivrede", "MREE", "Regionalna ekonomija", "NEK", "Nacionalna ekonomija"] },
     { value: "46", text: "46 Soldić-Aleksić", tags: ["ANP", "Analiza podataka", "APS", "Analiza podataka i statistički softver", "IPA", "Informacioni sistemi i poslovna analitika", "MNTA", "Napredne tehnike analize podataka"] },
     { value: "47", text: "47 Stankić", tags: ["ELP", "Elektronsko poslovanje", "EPS", "Elektronski platni sistemi", "ERP", "ERP softver", "BPP", "Bankarsko poslovanje i platni promet", "NIT", "Nove informacione tehnologije", "PIN", "Poslovna informatika", "RSV", "Razvoj softvera", "MPIT", "Poslovne informacione tehnologije"] },
-    { value: "48", text: "48 Ušćumlić", tags: ["EKP", "Ekonomika preduzeća", "PUM", "Preduzetništvo i upravljanje malim preduzećem", "MEIP", "Evaluacija investicionih projekata", "MPAB", "Poslovna analiza i biznis plan", "MUPI", "Upravljanje investicijama", "MUPR", "Upravljanje rizicima M"] },
+    { value: "48", text: "48 Ušćumlić" },
     { value: "49", text: "49 Cerović" },
     { value: "50", text: "50 Čupić" },
     { value: "51", text: "51 Škarić Jovanović" },
