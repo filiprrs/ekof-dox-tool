@@ -49,10 +49,12 @@
                  </details>
               </div>			  
               <div class="input-field col s12">
-                <select id="nastavnik" searchable="Pretraži nastavnika">
-                  <option disabled selected value></option>
-                </select>
-                <label>NASTAVNIK</label>
+                <label for="nastavnikSearch" class="active">NASTAVNIK</label>
+                <div class="nastavnik-search-wrap">
+                  <input type="text" id="nastavnikSearch" autocomplete="off">
+                  <input type="hidden" id="nastavnik" value="">
+                  <ul id="nastavnikDropdown" class="nastavnik-dropdown" hidden></ul>
+                </div>
                 <details>
                   <summary>Pomoć</summary>
                   Za ispitne rokove pre aprila 2023. godine, potrebno je odabrati glavnog nastavnika na odabranom predmetu. Od aprila 2023. godine, rezultati su evidentirani kod nastavnika koji je zaista ocenio ispit (iz tog razloga, kod predmeta sa više ispitivača, moguće je da su rezultati podeljeni na više nastavnika). 
