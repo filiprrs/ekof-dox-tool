@@ -299,4 +299,111 @@ const nastavnikIndex = nastavnikOptions.map((o) => {
   input.addEventListener("blur", () => {
     setTimeout(() => { dropdown.hidden = true; }, 150); // prvo spusti miša
   });
+
+// Automatski izvedena baza predmeta
+const predmetIndex = (() => {
+  const map = new Map(); // šifra -> skup naziva
+  nastavnikOptions.forEach((o) => {
+    let pending = [];
+    (o.tags || []).forEach((t) => {
+      if (t.length <= 4) {
+        pending.push(t);
+      } else {
+        pending.forEach((code) => {
+          if (!map.has(code)) map.set(code, new Set());
+          map.get(code).add(t);
+        });
+        pending = [];
+      }
+    });
+  });
+  return Array.from(map.entries()).map(([code, names]) => ({
+    code,
+    codeFolded: foldSerbian(code),
+    nameWordLists: Array.from(names).map((n) =>
+      foldSerbian(n).replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter(Boolean)
+    ),
+  }));
+})();
+
+(function initPredmetSearch() {
+  const input = document.getElementById("šifra");
+  const dropdown = document.getElementById("predmetDropdown");
+  if (!input || !dropdown) return;
+
+  let matches = [];
+  let activeIndex = -1;
+
+  function searchPredmeti(query) {
+    const q = foldSerbian(query);
+    if (q.length < 3) return [];                 // ispod 3 znaka: ništa
+    const terms = q.replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter(Boolean);
+return predmetIndex.filter(
+      (p) =>
+        p.codeFolded === q ||                    // šifra: samo tačno poklapanje
+        (q.length >= 5 &&                        // nazivi tek od 5 znakova
+          p.nameWordLists.some(
+            (words) => tagPhraseMatch(words, terms) && words[0] === terms[0]
+          ))                                     // prva reč naziva uvek cela
+    );
+  }
+
+  function renderList() {
+    dropdown.innerHTML = "";
+    activeIndex = -1;
+    if (matches.length === 0) { dropdown.hidden = true; return; } // pomoć: bez rezultata, bez poruke
+    matches.forEach((m) => {
+      const li = document.createElement("li");
+      li.textContent = m.code;                   // prikazuje se SAMO šifra
+      li.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        choose(m);
+      });
+      dropdown.appendChild(li);
+    });
+    dropdown.hidden = false;
+  }
+
+  function choose(match) {
+    input.value = match.code;
+    dropdown.hidden = true;
+  }
+
+  function setActive(i) {
+    const items = dropdown.querySelectorAll("li");
+    items.forEach((li) => li.classList.remove("active"));
+    if (i >= 0 && items[i]) {
+      items[i].classList.add("active");
+      items[i].scrollIntoView({ block: "nearest" });
+    }
+  }
+
+  input.addEventListener("input", () => {
+    matches = searchPredmeti(input.value);
+    renderList();
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (dropdown.hidden) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      activeIndex = Math.min(activeIndex + 1, matches.length - 1);
+      setActive(activeIndex);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      activeIndex = Math.max(activeIndex - 1, 0);
+      setActive(activeIndex);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (activeIndex >= 0) choose(matches[activeIndex]);
+      else if (matches.length === 1) choose(matches[0]);
+    } else if (e.key === "Escape") {
+      dropdown.hidden = true;
+    }
+  });
+
+  input.addEventListener("blur", () => {
+    setTimeout(() => { dropdown.hidden = true; }, 150);
+  });
+})();
 })();

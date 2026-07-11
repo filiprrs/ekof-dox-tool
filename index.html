@@ -61,12 +61,15 @@
                 </details>
               </div>
               <div class="input-field col s12">
-                <input id="šifra" type="text" autocomplete="off">
-                <label for="value">ŠIFRA PREDMETA</label>
+                <label for="šifra" class="active">ŠIFRA PREDMETA</label>
+                <div class="nastavnik-search-wrap">
+                  <input id="šifra" type="text" autocomplete="off">
+                  <ul id="predmetDropdown" class="nastavnik-dropdown" hidden></ul>
+                </div>
                 Primer: <i>OEK</i> za predmet Osnovi ekonomije.
                 <details>
                   <summary>Pomoć</summary>
-                  Šifra predmeta ima 3 slova, ili 4 ukoliko je reč o predmetu sa master studija. Na primer, <i>OEK</i> je šifra za predmet Osnovi ekonomije, a <i>MSTK</i> šifra za predmet Strategijski kontroling sa master studija. Šifre se mogu naći pored naziva predmeta na servisu, u sekcijama Položeni ispiti, Nepoloženi ispiti, Istorija polaganja, Prijava ispita, Odjava ispita.
+                  Šifra predmeta ima 3 slova, ili 4 ukoliko je reč o predmetu sa master studija. Na primer, <i>OEK</i> je šifra za predmet Osnovi ekonomije, a <i>MSTK</i> šifra za predmet Strategijski kontroling sa master studija. Šifre se mogu naći pored naziva predmeta na servisu, u sekcijama Položeni ispiti, Nepoloženi ispiti, Istorija polaganja, Prijava ispita, Odjava ispita. Može se uneti i pun naziv predmeta, na osnovu kog će program predložiti šifru.
                 </details>
               </div>
               <div class="input-field col s12">
